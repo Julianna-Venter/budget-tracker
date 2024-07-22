@@ -46,30 +46,30 @@ export class MyBudgetComponent {
 
     // Define a complete budgetModel with default values
     const defaultBudget: budgetModel = {
-      salary: formValues.salary ?? 0,
-      otherIncome: formValues.otherIncome ?? 0,
-      taxAmount: formValues.taxAmount ?? 0,
-      taxPercentage: formValues.taxPercentage ?? 13.86,
-      retirement: formValues.retirement ?? 0,
-      unemployment: formValues.unemployment ?? 0,
-      medicalAid: formValues.medicalAid ?? 0,
-      insurance: formValues.insurance ?? 0,
-      savings: formValues.savings ?? 0,
-      investments: formValues.investments ?? 0,
-      interest: formValues.interest ?? 0,
-      emergency: formValues.emergency ?? 0,
-      rent: formValues.rent ?? 0,
-      electricity: formValues.electricity ?? 0,
-      water: formValues.water ?? 0,
-      groceries: formValues.groceries ?? 0,
-      fuel: formValues.fuel ?? 0,
-      pet: formValues.pet ?? 0,
-      bigPurchases: formValues.bigPurchases ?? 0,
-      carEmergencies: formValues.carEmergencies ?? 0,
-      glasses: formValues.glasses ?? 0,
-      clothes: formValues.clothes ?? 0,
-      entertainment: formValues.entertainment ?? 0,
-      subscriptions: formValues.subscriptions ?? 0,
+      salary: this.processValue(formValues.salary),
+      otherIncome: this.processValue(formValues.otherIncome),
+      taxAmount: this.processValue(formValues.taxAmount),
+      taxPercentage: this.processValue(formValues.taxPercentage) || 13.86,
+      retirement: this.processValue(formValues.retirement),
+      unemployment: this.processValue(formValues.unemployment),
+      medicalAid: this.processValue(formValues.medicalAid),
+      insurance: this.processValue(formValues.insurance),
+      savings: this.processValue(formValues.savings),
+      investments: this.processValue(formValues.investments),
+      interest: this.processValue(formValues.interest),
+      emergency: this.processValue(formValues.emergency),
+      rent: this.processValue(formValues.rent),
+      electricity: this.processValue(formValues.electricity),
+      water: this.processValue(formValues.water),
+      groceries: this.processValue(formValues.groceries),
+      fuel: this.processValue(formValues.fuel),
+      pet: this.processValue(formValues.pet),
+      bigPurchases: this.processValue(formValues.bigPurchases),
+      carEmergencies: this.processValue(formValues.carEmergencies),
+      glasses: this.processValue(formValues.glasses),
+      clothes: this.processValue(formValues.clothes),
+      entertainment: this.processValue(formValues.entertainment),
+      subscriptions: this.processValue(formValues.subscriptions),
     };
 
     // Convert the complete model to JSON
@@ -80,4 +80,15 @@ export class MyBudgetComponent {
 
     console.warn('Form values saved to localStorage:', formValuesJson);
   }
+
+  processValue = (value: any): number => {
+    // Check if value is a string
+    if (typeof value === 'string') {
+      // Remove spaces and commas (if needed) and convert to number
+      return parseFloat(value.replace(/\s+/g, '').replace(/,/g, '')) || 0;
+    }
+
+    // Ensure value is a number or default to 0
+    return value || 0;
+  };
 }

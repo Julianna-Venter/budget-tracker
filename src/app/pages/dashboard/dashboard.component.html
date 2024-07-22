@@ -1,1 +1,9 @@
-<p>dashboard works!</p>
+<p>Total Income: {{ totalIncome }}</p>
+<p>Total Expenses: {{ totalExpenses }}</p>
+<p>Total Savings: {{ totalSavings }}</p>
+<p>Income: {{ proportionList[0] }}%</p>
+<p>Expenses: {{ proportionList[1] }}%</p>
+<p>Savings: {{ proportionList[2] }}%</p>
+<p>Left Over: {{ leftOver }}</p>
+
+{{ parsedValues | json }}

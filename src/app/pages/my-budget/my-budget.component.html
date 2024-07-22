@@ -1,0 +1,405 @@
+<div class="w-full h-full flex justify-center items-center">
+  <form
+    [formGroup]="budgetForm"
+    (ngSubmit)="onSubmit()"
+    class="grid grid-cols-4 gap-x-20 gap-y-5"
+  >
+    <!-- Income -->
+    <div class="flx flex-col">
+      <div class="w-64 flex flex-col gap-5">
+        <span class="text-xl">Income</span>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight">Salary</label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="salary"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Other Income</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="otherIncome"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+      </div>
+
+      <div
+        class="w-full h-0.5 bg-grey-text-light opacity-20 rounded-full my-16"
+      ></div>
+
+      <div class="w-64 flex flex-col gap-5">
+        <span class="text-xl">Tax</span>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Tax by Amount</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="taxAmount"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex justify-center items-center gap-2 px-10">
+          <div
+            class="w-full h-0.5 bg-grey-text-light opacity-20 rounded-full my-5"
+          ></div>
+          <span class="poppins-light-italic">OR</span>
+          <div
+            class="w-full h-0.5 bg-grey-text-light opacity-20 rounded-full my-5"
+          ></div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Tax by Percentage</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <input
+              type="text"
+              class="grow"
+              formControlName="taxPercentage"
+              placeholder="14%"
+            />
+            <span class="poppins-light-italic">%</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed Expensed -->
+    <div class="flx flex-col">
+      <div class="w-64 flex flex-col gap-5">
+        <span class="text-xl">Life Expenses</span>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Retirement Annuity
+          </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="retirement"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Unemployment
+          </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="unemployment"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Medical Aid</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="medicalAid"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Insurance</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="insurance"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+      </div>
+
+      <div
+        class="w-full h-0.5 bg-grey-text-light opacity-20 rounded-full my-16"
+      ></div>
+
+      <div class="w-64 flex flex-col gap-5">
+        <span class="text-xl">Savings</span>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight">Savings</label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="savings"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex gap-1">
+          <div class="flex flex-col gap-1">
+            <label for="budget" class="text-lg poppins-extralight"
+              >Investments</label
+            >
+            <label class="input input-bordered flex items-center gap-2">
+              <span class="poppins-light-italic">R</span>
+              <input
+                type="text"
+                class="grow w-1/2"
+                formControlName="investments"
+                placeholder="0.00"
+              />
+            </label>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="budget" class="text-lg poppins-extralight text-right"
+              >Interest</label
+            >
+            <label class="input input-bordered flex items-center gap-2">
+              <input
+                type="text"
+                class="grow w-1/2"
+                formControlName="interest"
+                placeholder="0.00"
+              />
+              <span class="poppins-light-italic">%</span>
+            </label>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Emergency Fund</label
+          >
+
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="emergency"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home and House -->
+    <div class="flx flex-col">
+      <div class="w-64 flex flex-col gap-5">
+        <span class="text-xl">Home Expenses</span>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Rent/Property</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="rent"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Electricity
+          </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="electricity"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight">Water </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="water"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+      </div>
+      <div
+        class="w-full h-0.5 bg-grey-text-light opacity-20 rounded-full my-16"
+      ></div>
+      <div class="w-64 flex flex-col gap-5">
+        <span class="text-xl">Household Expenses</span>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Groceries</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="groceries"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Car Fuel
+          </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="fuel"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Pet Costs
+          </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="pet"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal -->
+    <div class="flex flex-col">
+      <div class="w-64 flex flex-col gap-5">
+        <span class="text-xl">Personal Expenses</span>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Big Purchases</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="bigPurchases"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Car Emergencies
+          </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="carEmergencies"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Glasses
+          </label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="glasses"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Entertainment</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="entertainment"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight"
+            >Subscriptions</label
+          >
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="subscriptions"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="budget" class="text-lg poppins-extralight">Clothes</label>
+          <label class="input input-bordered flex items-center gap-2">
+            <span class="poppins-light-italic">R</span>
+            <input
+              type="text"
+              class="grow"
+              formControlName="clothes"
+              placeholder="0.00"
+            />
+          </label>
+        </div>
+      </div>
+      <div class="col-span-4 flex justify-end mt-auto">
+        <button
+          type="submit"
+          class="btn btn-ghost rounded-full bg-accent-orange text-white px-12 hover:bg-dark-green"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

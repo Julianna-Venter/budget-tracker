@@ -1,4 +1,4 @@
-export interface budget {
+export interface budgetModel {
   salary: number;
   otherIncome: number;
   taxAmount: number;

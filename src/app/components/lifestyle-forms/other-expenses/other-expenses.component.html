@@ -1,66 +1,62 @@
 <form [formGroup]="budgetForm" class="py-4 px-6 rounded-3xl flex-grow h-full">
-  <div class="w-64 flex flex-col gap-3" formGroupName="peronalDeductions">
-    <span class="text-xl">Personal Deductions</span>
+  <div class="w-64 flex flex-col gap-3" formGroupName="otherDeductions">
+    <span class="text-xl">Other Deductions</span>
     <div class="flex flex-col gap-1">
-      <label for="budget" class="text-lg poppins-extralight">Groceries</label>
+      <label for="budget" class="text-lg poppins-extralight">Glasses</label>
       <label class="input input-bordered flex items-center gap-2">
         <span class="poppins-light-italic">R</span>
         <input
           type="number"
           class="grow"
-          formControlName="groceries"
+          formControlName="glasses"
           placeholder="0.00"
         />
       </label>
     </div>
     <div class="flex flex-col gap-1">
-      <label for="budget" class="text-lg poppins-extralight">Petrol</label>
+      <label for="budget" class="text-lg poppins-extralight">Clothes</label>
       <label class="input input-bordered flex items-center gap-2">
         <span class="poppins-light-italic">R</span>
         <input
           type="number"
           class="grow"
-          formControlName="petrol"
+          formControlName="clothes"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight">Vehicle</label>
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="vehicle"
           placeholder="0.00"
         />
       </label>
     </div>
     <div class="flex flex-col gap-1">
       <label for="budget" class="text-lg poppins-extralight"
-        >Big Purchases</label
+        >Other Deduction</label
       >
       <label class="input input-bordered flex items-center gap-2">
-        <span class="poppins-light-italic">R</span>
         <input
-          type="number"
+          type="text"
           class="grow"
-          formControlName="bigPurchases"
-          placeholder="0.00"
+          formControlName="otherName"
+          placeholder="Deduction Name"
         />
       </label>
     </div>
     <div class="flex flex-col gap-1">
-      <label for="budget" class="text-lg poppins-extralight"
-        >Emergency Fund</label
-      >
       <label class="input input-bordered flex items-center gap-2">
         <span class="poppins-light-italic">R</span>
         <input
           type="number"
           class="grow"
-          formControlName="emergencyFund"
-          placeholder="0.00"
-        />
-      </label>
-    </div>
-    <div class="flex flex-col gap-1">
-      <label for="budget" class="text-lg poppins-extralight">Pet</label>
-      <label class="input input-bordered flex items-center gap-2">
-        <span class="poppins-light-italic">R</span>
-        <input
-          type="number"
-          class="grow"
-          formControlName="pet"
+          formControlName="otherValue"
           placeholder="0.00"
         />
       </label>

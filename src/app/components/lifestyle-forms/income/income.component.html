@@ -1,10 +1,7 @@
-<form
-  [formGroup]="budgetForm"
-  class="py-4 px-6 rounded-3xl bg-grey-blue/30 backdrop-blur-xl flex-grow h-full"
->
+<form [formGroup]="budgetForm" class="py-4 px-6 rounded-3xl flex-grow h-full">
   <!-- Income -->
   <div class="flex flex-col" formGroupName="income">
-    <div class="w-64 flex flex-col gap-5">
+    <div class="w-64 flex flex-col gap-3">
       <span class="text-xl">Income</span>
       <div class="flex flex-col gap-1">
         <label for="budget" class="text-lg poppins-extralight">Salary</label>

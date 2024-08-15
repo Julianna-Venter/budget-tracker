@@ -404,12 +404,19 @@
   </form>
 </div> -->
 
-<div class="w-full h-full flex justify-center items-center">
-  <div class="h-full w-full">
+<form
+  [formGroup]="budgetForm"
+  (ngSubmit)="onSubmit()"
+  class="w-full h-full flex justify-center items-center"
+>
+  <div class="h-full w-full flex gap-8">
     <div class="flex flex-col gap-5 h-full w-full">
       <div class="h-full w-full flex flex-col">
         <app-income [budgetForm]="budgetForm" class="h-full w-full flex-grow" />
       </div>
+      <div
+        class="w-[80%] h-0.5 bg-grey-text-light opacity-20 rounded-full self-center"
+      ></div>
       <div class="h-full w-full flex flex-col">
         <app-salary-deductions
           [budgetForm]="budgetForm"
@@ -417,5 +424,64 @@
         />
       </div>
     </div>
+    <div class="flex flex-col gap-5 h-full w-full">
+      <div class="h-full w-full flex flex-col">
+        <app-household-expenses
+          [budgetForm]="budgetForm"
+          class="h-full w-full flex-grow"
+        />
+      </div>
+      <div
+        class="w-[80%] h-0.5 bg-grey-text-light opacity-20 rounded-full self-center"
+      ></div>
+      <div class="h-full w-full flex flex-col">
+        <app-debit-orders
+          [budgetForm]="budgetForm"
+          class="h-full w-full flex-grow"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col gap-5 h-full w-full">
+      <div class="h-full w-full flex flex-col">
+        <app-personal-deductions
+          [budgetForm]="budgetForm"
+          class="h-full w-full flex-grow"
+        />
+      </div>
+      <div
+        class="w-[80%] h-0.5 bg-grey-text-light opacity-20 rounded-full self-center"
+      ></div>
+      <div class="h-full w-full flex flex-col">
+        <app-investments-savings
+          [budgetForm]="budgetForm"
+          class="h-full w-full flex-grow"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col gap-5 h-full w-full">
+      <div class="h-full w-full flex flex-col">
+        <app-insurance
+          [budgetForm]="budgetForm"
+          class="h-full w-full flex-grow"
+        />
+      </div>
+      <div
+        class="w-[80%] h-0.5 bg-grey-text-light opacity-20 rounded-full self-center"
+      ></div>
+      <div class="h-full w-full flex flex-col">
+        <app-other-expenses
+          [budgetForm]="budgetForm"
+          class="h-full w-full flex-grow"
+        />
+      </div>
+      <div class="col-span-4 flex justify-end mt-auto">
+        <button
+          type="submit"
+          class="btn btn-ghost rounded-full bg-accent-orange text-white px-12 hover:bg-dark-green"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
   </div>
-</div>
+</form>

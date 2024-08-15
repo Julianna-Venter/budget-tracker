@@ -1,1 +1,73 @@
-<p>debit-orders works!</p>
+<form [formGroup]="budgetForm" class="py-4 px-6 rounded-3xl flex-grow h-full">
+  <div class="w-64 flex flex-col gap-3" formGroupName="debitOrders">
+    <span class="text-xl">Debit Orders</span>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight"
+        >Entertainment</label
+      >
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="entertainment"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight"
+        >Car Payments</label
+      >
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="carPayments"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight"
+        >Gym & Health</label
+      >
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="health"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight">Banking</label>
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="banking"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight"
+        >Subscriptions</label
+      >
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="subscriptions"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+  </div>
+</form>

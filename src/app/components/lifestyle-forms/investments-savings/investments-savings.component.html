@@ -1,1 +1,29 @@
-<p>investments-savings works!</p>
+<form [formGroup]="budgetForm" class="py-4 px-6 rounded-3xl flex-grow h-full">
+  <div class="w-64 flex flex-col gap-3" formGroupName="investments">
+    <span class="text-xl">Investments</span>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight">Long Term</label>
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="longTerm"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight">Short Term</label>
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="shortTerm"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+  </div>
+</form>

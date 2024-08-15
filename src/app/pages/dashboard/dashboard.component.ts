@@ -2,11 +2,12 @@ import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { budgetModel } from '../../models/budget';
 import { MafsService } from '../../services/mafs.service';
+import { PieChartComponent } from '../../components/pie-chart/pie-chart.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [JsonPipe],
+  imports: [JsonPipe, PieChartComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })

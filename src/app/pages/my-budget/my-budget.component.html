@@ -1,10 +1,10 @@
-<div class="w-full h-full flex justify-center items-center">
+<!-- <div class="w-full h-full flex justify-center items-center">
   <form
     [formGroup]="budgetForm"
     (ngSubmit)="onSubmit()"
     class="grid grid-cols-4 gap-x-20 gap-y-5"
   >
-    <!-- Income -->
+    Income
     <div class="flx flex-col">
       <div class="w-64 flex flex-col gap-5">
         <span class="text-xl">Income</span>
@@ -82,7 +82,7 @@
       </div>
     </div>
 
-    <!-- Fixed Expensed -->
+    Fixed Expensed
     <div class="flx flex-col">
       <div class="w-64 flex flex-col gap-5">
         <span class="text-xl">Life Expenses</span>
@@ -210,7 +210,7 @@
       </div>
     </div>
 
-    <!-- Home and House -->
+    Home and House
     <div class="flx flex-col">
       <div class="w-64 flex flex-col gap-5">
         <span class="text-xl">Home Expenses</span>
@@ -305,7 +305,7 @@
       </div>
     </div>
 
-    <!-- Personal -->
+    Personal
     <div class="flex flex-col">
       <div class="w-64 flex flex-col gap-5">
         <span class="text-xl">Personal Budget</span>
@@ -402,4 +402,20 @@
       </div>
     </div>
   </form>
+</div> -->
+
+<div class="w-full h-full flex justify-center items-center">
+  <div class="h-full w-full">
+    <div class="flex flex-col gap-5 h-full w-full">
+      <div class="h-full w-full flex flex-col">
+        <app-income [budgetForm]="budgetForm" class="h-full w-full flex-grow" />
+      </div>
+      <div class="h-full w-full flex flex-col">
+        <app-salary-deductions
+          [budgetForm]="budgetForm"
+          class="h-full w-full flex-grow"
+        />
+      </div>
+    </div>
+  </div>
 </div>

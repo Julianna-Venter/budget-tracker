@@ -1,0 +1,60 @@
+<form
+  [formGroup]="budgetForm"
+  class="py-4 px-6 rounded-3xl bg-grey-blue/30 backdrop-blur-xl flex-grow h-full"
+>
+  <div class="w-64 flex flex-col gap-5" formGroupName="salaryDeductions">
+    <span class="text-xl">Salary Deductions</span>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight"
+        >Tax by Amount</label
+      >
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="taxAmount"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight"
+        >Unemployment</label
+      >
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="unemployment"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight">Medical Aid</label>
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="medicalAid"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+    <div class="flex flex-col gap-1">
+      <label for="budget" class="text-lg poppins-extralight">Retirement</label>
+      <label class="input input-bordered flex items-center gap-2">
+        <span class="poppins-light-italic">R</span>
+        <input
+          type="number"
+          class="grow"
+          formControlName="retirement"
+          placeholder="0.00"
+        />
+      </label>
+    </div>
+  </div>
+</form>

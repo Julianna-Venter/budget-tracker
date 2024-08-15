@@ -1,0 +1,59 @@
+<form
+  [formGroup]="budgetForm"
+  class="py-4 px-6 rounded-3xl bg-grey-blue/30 backdrop-blur-xl flex-grow h-full"
+>
+  <!-- Income -->
+  <div class="flex flex-col" formGroupName="income">
+    <div class="w-64 flex flex-col gap-5">
+      <span class="text-xl">Income</span>
+      <div class="flex flex-col gap-1">
+        <label for="budget" class="text-lg poppins-extralight">Salary</label>
+        <label class="input input-bordered flex items-center gap-2">
+          <span class="poppins-light-italic">R</span>
+          <input
+            type="number"
+            class="grow"
+            formControlName="salary"
+            placeholder="0.00"
+          />
+        </label>
+      </div>
+      <div class="flex flex-col gap-1">
+        <label for="budget" class="text-lg poppins-extralight"
+          >Commission</label
+        >
+        <label class="input input-bordered flex items-center gap-2">
+          <span class="poppins-light-italic">R</span>
+          <input
+            type="number"
+            class="grow"
+            formControlName="commission"
+            placeholder="0.00"
+          />
+        </label>
+      </div>
+      <div class="flex flex-col gap-1">
+        <label for="budget" class="text-lg poppins-extralight"
+          >Other Income</label
+        >
+        <label class="input input-bordered flex items-center gap-2">
+          <input
+            type="text"
+            class="grow"
+            formControlName="otherName"
+            placeholder="Name of Income"
+          />
+        </label>
+        <label class="input input-bordered flex items-center gap-2">
+          <span class="poppins-light-italic">R</span>
+          <input
+            type="number"
+            class="grow"
+            formControlName="otherValue"
+            placeholder="0.00"
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+</form>

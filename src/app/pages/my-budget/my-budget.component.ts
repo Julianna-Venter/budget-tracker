@@ -34,13 +34,28 @@ export class MyBudgetComponent {
   }
 
   onSubmit() {
-    console.log(this.budgetForm.value);
+    this.saveFormGroupToLocalStorage(this.budgetForm);
   }
 
-  processValue = (value: any): number => {
-    if (typeof value === 'string') {
-      return parseFloat(value.replace(/\s+/g, '').replace(/,/g, '')) || 0;
-    }
-    return value || 0;
-  };
+  private saveFormGroupToLocalStorage(formGroup: FormGroup): void {
+    Object.keys(formGroup.controls).forEach((key) => {
+      const control = formGroup.get(key);
+      if (control instanceof FormGroup) {
+        this.saveFormGroupToLocalStorage(control);
+      } else {
+        localStorage.setItem(`${key}`, JSON.stringify(control?.value));
+      }
+    });
+  }
+
+  private setFormGroupValues(formGroup: FormGroup, values: any): void {
+    Object.keys(values).forEach((key) => {
+      const control = formGroup.get(key);
+      if (control instanceof FormGroup) {
+        this.setFormGroupValues(control, values[key]);
+      } else {
+        control?.setValue(values[key]);
+      }
+    });
+  }
 }

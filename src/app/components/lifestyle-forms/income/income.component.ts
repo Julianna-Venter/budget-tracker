@@ -17,8 +17,8 @@ export class IncomeComponent implements OnInit {
       new FormGroup({
         salary: new FormControl(),
         commission: new FormControl(),
-        otherName: new FormControl(''),
-        otherValue: new FormControl(),
+        deductionName: new FormControl(''),
+        deductionValue: new FormControl(),
       })
     );
   }

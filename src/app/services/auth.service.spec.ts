@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MafsService } from './mafs.service';
+import { AuthService } from './auth.service';
 
-describe('MafsService', () => {
-  let service: MafsService;
+describe('AuthService', () => {
+  let service: AuthService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MafsService);
+    service = TestBed.inject(AuthService);
   });
 
   it('should be created', () => {

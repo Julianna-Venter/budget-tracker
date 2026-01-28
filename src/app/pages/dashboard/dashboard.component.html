@@ -1,11 +1,19 @@
-<!-- <p>Total Income: {{ totalIncome }}</p>
-<p>Total Expenses: {{ totalExpenses }}</p>
-<p>Total Savings: {{ totalSavings }}</p>
-<p>Income: {{ proportionList[0] }}%</p>
-<p>Expenses: {{ proportionList[1] }}%</p>
-<p>Savings: {{ proportionList[2] }}%</p>
-<p>Left Over: {{ leftOver }}</p>
+Method:
+1. CRON job every 6 hours
+<br>
+a. authenticate with the API
+<br>
+b. check all transactions in the last 6 hours from main acount
+<br>
+c. rund up every transaction to the nearest 10
+<br>
+d. create a final amount with the difference
+<br>
+e. create a new transaction with the difference
+<br>
+f. transfer the difference to the savings account
 
-{{ parsedValues | json }} -->
 
-<app-pie-chart />
+<div>
+    <span>{{amount}}</span>
+</div>
